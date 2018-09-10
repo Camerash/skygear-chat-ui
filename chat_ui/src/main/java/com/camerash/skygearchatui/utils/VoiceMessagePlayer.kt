@@ -2,7 +2,8 @@ package com.camerash.skygearchatui.utils
 
 import android.content.Context
 import android.media.MediaPlayer
-import android.media.MediaPlayer.* // ktlint-disable no-wildcard-imports
+import android.media.MediaPlayer.MEDIA_ERROR_SERVER_DIED
+import android.media.MediaPlayer.MEDIA_ERROR_UNKNOWN
 import com.camerash.skygearchatui.model.VoiceMessage
 
 class VoiceMessagePlayer(val context: Context) {

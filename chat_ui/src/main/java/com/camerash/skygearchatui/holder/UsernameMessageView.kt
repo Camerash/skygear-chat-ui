@@ -2,8 +2,8 @@ package com.camerash.skygearchatui.holder
 
 import android.view.View
 import android.widget.TextView
+import com.camerash.skygearchatui.R
 import com.camerash.skygearchatui.model.Message
-import io.skygear.plugins.chat.ui.R
 
 class UsernameMessageView(itemView: View) {
 

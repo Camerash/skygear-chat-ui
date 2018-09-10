@@ -9,11 +9,10 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageView
-import com.squareup.picasso.Picasso
-import com.squareup.picasso.Transformation
 import com.camerash.skygearchatui.utils.getImageOrientation
 import com.camerash.skygearchatui.utils.matrixFromRotation
-import io.skygear.plugins.chat.ui.R
+import com.squareup.picasso.Picasso
+import com.squareup.picasso.Transformation
 
 class ImagePreviewActivity : AppCompatActivity() {
 

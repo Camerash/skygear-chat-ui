@@ -2,9 +2,9 @@ package com.camerash.skygearchatui.model
 
 import com.stfalcon.chatkit.commons.models.IMessage
 import io.skygear.plugins.chat.Message.Status
-import java.util.* // ktlint-disable no-wildcard-imports
-import io.skygear.plugins.chat.Message as ChatMessage
 import io.skygear.skygear.Error
+import java.util.*
+import io.skygear.plugins.chat.Message as ChatMessage
 
 open class Message : IMessage {
     val chatMessage: ChatMessage

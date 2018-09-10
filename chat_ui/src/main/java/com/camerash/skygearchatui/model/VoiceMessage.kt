@@ -1,7 +1,7 @@
 package com.camerash.skygearchatui.model
 
-import android.net.Uri
 import android.media.MediaRecorder
+import android.net.Uri
 import com.stfalcon.chatkit.commons.models.MessageContentType
 import io.skygear.skygear.Asset
 import io.skygear.skygear.Record

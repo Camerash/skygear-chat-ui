@@ -4,15 +4,15 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
+import android.media.ExifInterface
 import android.net.Uri
 import android.os.Environment
 import java.io.ByteArrayOutputStream
 import java.io.File
+import java.io.FileOutputStream
 import java.io.IOException
 import java.text.SimpleDateFormat
-import java.util.* // ktlint-disable no-wildcard-imports
-import android.media.ExifInterface
-import java.io.FileOutputStream
+import java.util.*
 
 /**
  * Created by carmenlau on 10/2/17.

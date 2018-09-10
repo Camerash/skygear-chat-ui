@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.camerash.skygearchatui.model.Message
-import io.skygear.plugins.chat.Conversation
 import com.camerash.skygearchatui.model.User
+import io.skygear.plugins.chat.Conversation
 import java.io.Serializable
 
 open class AvatarAdapter : Serializable {

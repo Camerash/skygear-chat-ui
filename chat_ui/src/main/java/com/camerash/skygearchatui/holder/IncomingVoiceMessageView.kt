@@ -1,8 +1,8 @@
 package com.camerash.skygearchatui.holder
 
 import android.view.View
-import com.stfalcon.chatkit.messages.MessageHolders
 import com.camerash.skygearchatui.model.VoiceMessage
+import com.stfalcon.chatkit.messages.MessageHolders
 
 class IncomingVoiceMessageView(view: View) :
         MessageHolders.IncomingTextMessageViewHolder<VoiceMessage>(view) {

@@ -1,10 +1,9 @@
 package com.camerash.skygearchatui.model
 
-import com.stfalcon.chatkit.commons.models.IUser
-
-import io.skygear.plugins.chat.Participant
 import com.camerash.skygearchatui.AvatarType
 import com.camerash.skygearchatui.utils.AvatarBuilder
+import com.stfalcon.chatkit.commons.models.IUser
+import io.skygear.plugins.chat.Participant
 import io.skygear.skygear.Asset
 import io.skygear.skygear.Record
 import java.net.URLEncoder

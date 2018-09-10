@@ -4,7 +4,7 @@ import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import io.skygear.plugins.chat.ui.R
+import com.camerash.skygearchatui.R
 import com.camerash.skygearchatui.model.VoiceMessage
 
 class VoiceMessageView(itemView: View, isIncoming: Boolean) {

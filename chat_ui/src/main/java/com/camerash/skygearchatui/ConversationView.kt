@@ -15,16 +15,16 @@ import android.view.View
 import android.widget.*
 import com.camerash.skygearchatui.holder.*
 import com.camerash.skygearchatui.model.*
-import com.dewarder.holdinglibrary.HoldingButtonLayout
-import com.dewarder.holdinglibrary.HoldingButtonLayoutListener
-import com.stfalcon.chatkit.messages.*
-import io.skygear.plugins.chat.Conversation
-import io.skygear.plugins.chat.Participant
-import io.skygear.plugins.chat.ui.holder.*
-import io.skygear.plugins.chat.ui.model.*
 import com.camerash.skygearchatui.utils.AvatarBuilder
 import com.camerash.skygearchatui.utils.ImageLoader
-import io.skygear.plugins.chat.ui.R
+import com.dewarder.holdinglibrary.HoldingButtonLayout
+import com.dewarder.holdinglibrary.HoldingButtonLayoutListener
+import com.stfalcon.chatkit.messages.CustomMessageHolders
+import com.stfalcon.chatkit.messages.MessageHolders
+import com.stfalcon.chatkit.messages.MessagesList
+import com.stfalcon.chatkit.messages.MessagesListAdapter
+import io.skygear.plugins.chat.Conversation
+import io.skygear.plugins.chat.Participant
 import io.skygear.skygear.Container
 import io.skygear.skygear.Error
 import io.skygear.plugins.chat.Message as ChatMessage

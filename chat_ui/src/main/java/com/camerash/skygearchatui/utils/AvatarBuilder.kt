@@ -1,9 +1,12 @@
 package com.camerash.skygearchatui.utils
 
-import android.graphics.* // ktlint-disable no-wildcard-imports
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.Rect
 import android.text.TextUtils
 import java.net.URI
-import java.util.* // ktlint-disable no-wildcard-imports
+import java.util.*
 
 class AvatarBuilder(
         val avatarWidth: Int,

@@ -2,20 +2,20 @@ package com.stfalcon.chatkit.messages
 import android.util.SparseArray
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.LinearLayout
 import android.widget.ImageButton
+import android.widget.LinearLayout
+import com.camerash.skygearchatui.AvatarAdapter
+import com.camerash.skygearchatui.DefaultAvatarAdapter
+import com.camerash.skygearchatui.R
+import com.camerash.skygearchatui.VoiceMessageOnClickListener
+import com.camerash.skygearchatui.model.ImageMessage
+import com.camerash.skygearchatui.model.Message
+import com.camerash.skygearchatui.model.VoiceMessage
 import com.stfalcon.chatkit.commons.ImageLoader
 import com.stfalcon.chatkit.commons.ViewHolder
 import com.stfalcon.chatkit.commons.models.IMessage
 import com.stfalcon.chatkit.utils.DateFormatter
 import io.skygear.plugins.chat.Conversation
-import com.camerash.skygearchatui.AvatarAdapter
-import io.skygear.plugins.chat.ui.R
-import com.camerash.skygearchatui.DefaultAvatarAdapter
-import com.camerash.skygearchatui.VoiceMessageOnClickListener
-import com.camerash.skygearchatui.model.ImageMessage
-import com.camerash.skygearchatui.model.Message
-import com.camerash.skygearchatui.model.VoiceMessage
 
 class CustomMessageHolders(avatarAdapterFunc: () -> AvatarAdapter, conversationFunc: () -> Conversation?) : MessageHolders() {
     // Copied from chatkit project

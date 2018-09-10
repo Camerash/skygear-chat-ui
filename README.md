@@ -63,7 +63,7 @@ public class MyApplication extends SkygearApplication {
 In your app manifest, include these lines for UIKit Activities:
 
 ```xml
-<activity android:name="io.skygear.plugins.chat.ui.ConversationActivity" />
+<activity android:name="com.camerash.skygearchatui.ConversationActivity" />
 ```
 
 ### 3. Start the conversation view

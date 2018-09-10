@@ -2,7 +2,6 @@ package com.camerash.skygearchatui
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import io.skygear.plugins.chat.ui.R
 
 class ConversationActivity : AppCompatActivity() {
 

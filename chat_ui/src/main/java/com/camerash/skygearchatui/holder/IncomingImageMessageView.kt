@@ -1,8 +1,8 @@
 package com.camerash.skygearchatui.holder
 
 import android.view.View
-import com.stfalcon.chatkit.messages.MessageHolders
 import com.camerash.skygearchatui.model.ImageMessage
+import com.stfalcon.chatkit.messages.MessageHolders
 
 class IncomingImageMessageView(itemView: View) : MessageHolders.IncomingImageMessageViewHolder<ImageMessage>(itemView) {
 

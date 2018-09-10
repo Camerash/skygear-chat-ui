@@ -2,6 +2,13 @@ package com.camerash.skygearchatui;
 
 import android.util.SparseArray;
 
+import com.camerash.skygearchatui.model.Message;
+import com.camerash.skygearchatui.model.User;
+import com.stfalcon.chatkit.commons.ImageLoader;
+import com.stfalcon.chatkit.messages.MessageHolders;
+import com.stfalcon.chatkit.messages.MessagesListAdapter;
+import com.stfalcon.chatkit.utils.DateFormatter;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -9,13 +16,6 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
-import com.stfalcon.chatkit.commons.ImageLoader;
-import com.stfalcon.chatkit.messages.MessageHolders;
-import com.stfalcon.chatkit.utils.DateFormatter;
-import com.camerash.skygearchatui.model.Message;
-import com.camerash.skygearchatui.model.User;
-import com.stfalcon.chatkit.messages.MessagesListAdapter;
 
 public class SortedMessageListAdapter extends MessagesListAdapter<Message> {
     public SortedMessageListAdapter(String senderId, MessageHolders holders, ImageLoader imageLoader) {

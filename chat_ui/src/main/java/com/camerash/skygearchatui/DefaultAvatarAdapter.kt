@@ -1,12 +1,11 @@
 package com.camerash.skygearchatui
 
-import android.view.View
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import io.skygear.plugins.chat.Conversation
 import com.camerash.skygearchatui.model.Message
 import com.camerash.skygearchatui.model.User
-import io.skygear.plugins.chat.ui.R
+import io.skygear.plugins.chat.Conversation
 
 open class DefaultAvatarAdapter() : AvatarAdapter() {
     override fun createAvatarView(inflater: LayoutInflater, viewGroup: ViewGroup): View {

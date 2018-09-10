@@ -3,9 +3,9 @@ package com.camerash.skygearchatui
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
-import com.stfalcon.chatkit.utils.ShapeImageView
 import com.camerash.skygearchatui.model.Message
 import com.camerash.skygearchatui.utils.AvatarBuilder
+import com.stfalcon.chatkit.utils.ShapeImageView
 
 class DefaultAvatarView(context: Context, attributeSet: AttributeSet) : ShapeImageView(context, attributeSet) {
 

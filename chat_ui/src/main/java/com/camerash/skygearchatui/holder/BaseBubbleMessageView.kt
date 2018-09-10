@@ -8,10 +8,10 @@ import android.support.v4.graphics.drawable.DrawableCompat
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.stfalcon.chatkit.R
 import com.camerash.skygearchatui.model.Message
 import com.camerash.skygearchatui.model.MessageBubbleStyle
-import io.skygear.plugins.chat.ui.R as UiKitResource
+import com.stfalcon.chatkit.R
+import com.camerash.skygearchatui.R as UiKitResource
 
 open class BaseBubbleMessageView(itemView: View, drawable: Int, val isIncoming: Boolean) {
     val bubble: ViewGroup?

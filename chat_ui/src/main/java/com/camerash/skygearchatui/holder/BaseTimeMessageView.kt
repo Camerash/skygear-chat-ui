@@ -2,11 +2,11 @@ package com.camerash.skygearchatui.holder
 
 import android.view.View
 import android.widget.TextView
-import com.stfalcon.chatkit.utils.DateFormatter
-import io.skygear.plugins.chat.ui.R
+import com.camerash.skygearchatui.R
 import com.camerash.skygearchatui.model.Message
 import com.camerash.skygearchatui.model.MessageStatusStyle
 import com.camerash.skygearchatui.model.MessageTimeStyle
+import com.stfalcon.chatkit.utils.DateFormatter
 
 open class BaseTimeMessageView(itemView: View) {
     var timeTextView: TextView? = null

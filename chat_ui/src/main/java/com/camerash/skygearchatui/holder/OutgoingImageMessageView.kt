@@ -3,9 +3,9 @@ package com.camerash.skygearchatui.holder
 import android.graphics.BitmapFactory
 import android.view.View
 import android.widget.ImageView
-import com.stfalcon.chatkit.messages.MessageHolders
-import io.skygear.plugins.chat.ui.R
+import com.camerash.skygearchatui.R
 import com.camerash.skygearchatui.model.ImageMessage
+import com.stfalcon.chatkit.messages.MessageHolders
 
 class OutgoingImageMessageView(itemView: View) : MessageHolders.OutcomingImageMessageViewHolder<ImageMessage>(itemView) {
     var receiverAvatarMessageView: ReceiverAvatarMessageView? = null

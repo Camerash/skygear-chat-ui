@@ -1,7 +1,7 @@
 package com.camerash.skygearchatui.model
 
-import io.skygear.plugins.chat.Message as ChatMessage
 import android.net.Uri
+import io.skygear.plugins.chat.Message as ChatMessage
 
 class MessageFactory {
     companion object {

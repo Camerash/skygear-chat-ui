@@ -1,7 +1,7 @@
 package com.camerash.skygearchatui.model
 
-import io.skygear.plugins.chat.Participant
 import com.camerash.skygearchatui.AvatarType
+import io.skygear.plugins.chat.Participant
 import io.skygear.skygear.Record
 
 class UserBuilder {
