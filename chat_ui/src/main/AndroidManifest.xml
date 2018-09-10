@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.camerash.skygearchatui">
+    package="com.camerash.skygear">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -25,7 +25,7 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name="com.camerash.skygearchatui.ImagePreviewActivity" />
+        <activity android:name="com.camerash.skygear.chat.ui.ImagePreviewActivity" />
     </application>
 
 </manifest>
