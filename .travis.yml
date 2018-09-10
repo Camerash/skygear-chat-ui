@@ -1,0 +1,61 @@
+language: android
+dk: oraclejdk8
+
+android:
+  components:
+    - tools
+    - tools # as per https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943
+    - platform-tools
+    - build-tools-26.0.2
+    - android-19
+    - android-26
+    - extra-android-support
+    - extra-android-m2repository
+    - extra-google-m2repository
+    - sys-img-armeabi-v7a-android-19
+  licenses:
+    - android-sdk-license-.+
+    - google-gdk-license-.+
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+before_script:
+  - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
+  - emulator -avd test -no-audio -no-window &
+  - android-wait-for-emulator
+  - adb shell input keyevent 82 &
+
+script:
+  - ./gradlew :chat:build --info --stacktrace
+  - ./gradlew :chat_ui:build --info --stacktrace
+  - ./gradlew :chat:check --info --stacktrace
+  - ./gradlew :chat:connectedAndroidTest --info --stacktrace
+
+before_deploy:
+  - sudo pip install awscli
+  - sudo pip install git+https://github.com/SkygearIO/skygear-doc-tools.git@master
+  - aws configure set preview.cloudfront true
+
+deploy:
+  - provider: script
+    script: scripts/deploy.sh
+    skip_cleanup: true
+    on:
+      repo: SkygearIO/chat-SDK-Android
+      all_branches: true
+
+after_deploy:
+  - ./scripts/after-deploy.sh
+
+env:
+  global:
+    - BINTRAY_USER="skygeario-builder"
+    # BINTRAY_API_KEY
+    - secure: "K7CMHXCLCbHi/a4ztSxfBS126c1S2TM5/sABMHbiu6R7hm5HnthJEzHQ+WFSawTlBh46TlK6c/H2qiBfD7gP7tti7S1g5PbdSFQxcOZTAPEPPJreLBW+n6vXMZowj8Xw87vAm8LEi9ldEEO5280JOTbu5+nu6duYZkWAOpdJ1wOBHd1Mrh9TLVvUm85N3zvpG1PfDLEiEajDDmkEpGWrHtui+a4YTzzalqpoAEPSsLzP9ihHcZ1fuGIO5RJ8WEDhneG1zqEC8nWsb4nxopYva/8OcvB8qojWulOaPZglF9W3WEyqKJvXQREDccNMj3cG2H0vOXFZauzAnXmcY87KILULQGNLoHdVf1a2UpXkuGKeBXVYSD646TWtCRtmX5k/VRGHnefjy5PJAKPzDHCcubad+kOlD/bsEohps25T8JOO4fD5uV+pQ9G6NFiEZNNIrvItp66Xf/0rBT2wBNOXz93/DBiRs+zg+tJCYVp6m51j+p33KKsCQsCGNT9aApRJAoIqr8nG8LeS8jQGyMkbaenn3ERegICXpQeKfyB/V/qk7wea+bv6C/+dvmfKRxnPSgjT0ra+f9iOF4KewU2ChnuTTb6HvP5e21n2jLxwdtPzLp/EzzmRGct8WlaCHuhwUKX7SAbTxdR3BU9LQyD6ygQ9kCrRWkamv7/a7El8qeA="
+
+notifications:
+  slack:
+    secure: "cp3jllMxq4jHE+YT8S2Cnm2oTvveEbunFOkTt5OjXTsiB78gChYrMy0HRmUBd6tYztiy4Varx+kkYf3lFUkqmCracELREPrs/uJj13Gem5sHYh1qs++oBAVy8P6ACY45r/W2vLEqLOAazWPW7kczeu93P27GnfjfDD9PNne+P/34LQ3D0ev5YZc1E7IQWwXvi8+ODW/NCIXkywcBNpJhXGFNU9obvA4mC+/Yt1aagjUEiZeF6zElqgwWHPEkty+6Pbl0yPQiMm3Mk8hvSkmcJ1Ea8PIdbeYi2Ai7TM3Ru4fiujiuRzCF7iv9Mp2zctYdRTFH20gU6+qBI/SByExOiTWMfgXgL74XWehmIecTs4PZExftXt9RGvKxgjqbBsZKzIP5cqV+6SDX6aJfniu05ObUaJX1EVbBujN2C0Yfj4fiv1RJNyyH3CdmvUnjdYJAsa6yfKfwSkP+nGkizftaAUoCfmjP/tVBPRgmtrZuvF0AoMamOqrmBPPOvtEEkEQH6t54Z3MANiyeHuuEj0BH4895PrHHH98w5XxPrkCqVy2PpRvNM4HHPJ4DcDuDDdpqBQegAMAjWhxJIYc9Bht+JxJH7UmdfrfvluXx6z+Vgs9HjZ2iS09rMv58CNNXT2XyaFPyTJnFjvp6DBckRoxoUf94+5pffG2eKJBOS/JWxKM="

@@ -1,0 +1,89 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:${dokka_version}"
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'org.jetbrains.dokka-android'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+def (bintrayUser, bintrayApiKey) = getBintrayCredentials()
+def VERSION = '1.6.3'
+
+group = 'com.camerash'
+version = VERSION
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName version
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/java'
+        main.kotlin.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:exifinterface:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.stfalcon:chatkit:0.3.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    implementation 'com.dewarder:holdingbutton:0.1.3'
+    implementation 'io.skygear:skygear:1.6.2'
+    implementation 'io.skygear.plugins:chat:1.6.3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.2.50"
+}
+
+
+bintray {
+    user = bintrayUser
+    key = bintrayApiKey
+    configurations = ['archives']
+    pkg {
+        repo = 'maven'
+        name = 'skygear-chat-ui'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/camerash/skygear-chat-ui.git'
+        publish = true
+        version {
+            name = version
+            desc = "Customized Skygear Android SDK UI Kit ${version}"
+            released  = new Date()
+            vcsTag = version
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
+}

@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.50'
+    ext.dokka_version = '0.9.15'
+    repositories {
+        google()
+        jcenter()
+        maven {
+          url "https://plugins.gradle.org/m2/"
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath "io.realm:realm-gradle-plugin:4.2.0"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+ext.getBintrayCredentials = { ->
+    def bintrayUser = System.getenv('BINTRAY_USER')
+    def bintrayApiKey = System.getenv('BINTRAY_API_KEY')
+
+    if (project.rootProject.file('local.properties').exists()) {
+        Properties localProperties = new Properties()
+        localProperties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+        bintrayUser = localProperties.getProperty('bintrayUser', bintrayUser)
+        bintrayApiKey = localProperties.getProperty('bintrayApiKey', bintrayApiKey)
+    }
+    return [bintrayUser, bintrayApiKey]
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
