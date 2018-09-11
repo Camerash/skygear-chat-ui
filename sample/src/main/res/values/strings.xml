@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Sample</string>
+
+    <string name="skygear_end_point">https://usthing.skygeario.com/</string>
+    <string name="skygear_API_key">f54a2884a45d48889e2a0e9165e7c623</string>
+</resources>

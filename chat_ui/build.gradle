@@ -79,16 +79,3 @@ bintray {
         }
     }
 }
-
-repositories {
-    mavenCentral()
-    maven {
-        url 'https://maven.google.com/'
-        name 'Google'
-    }
-
-    // Remove after package is up on jcenter
-    maven {
-        url  "https://dl.bintray.com/camerash/maven"
-    }
-}

@@ -1,1 +1,1 @@
-include ':chat_ui'
+include ':chat_ui', ':sample'

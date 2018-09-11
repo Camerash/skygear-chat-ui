@@ -7,7 +7,7 @@ buildscript {
         google()
         jcenter()
         maven {
-          url "https://plugins.gradle.org/m2/"
+            url "https://plugins.gradle.org/m2/"
         }
     }
 
@@ -41,6 +41,12 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://jitpack.io" }
+        google()
+
+        // Remove after package is up on jcenter
+        maven {
+            url  "https://dl.bintray.com/camerash/maven"
+        }
     }
 }
 
