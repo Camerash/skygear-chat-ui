@@ -1,6 +1,6 @@
 package com.camerash.skygear.chat.ui.model
 
-import com.stfalcon.chatkit.commons.models.IMessage
+import com.camerash.skygear.chatkit.commons.models.IMessage
 import io.skygear.plugins.chat.Message.Status
 import io.skygear.skygear.Error
 import java.util.*

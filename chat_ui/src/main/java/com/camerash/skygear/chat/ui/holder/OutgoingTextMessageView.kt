@@ -2,7 +2,7 @@ package com.camerash.skygear.chat.ui.holder
 
 import android.view.View
 import com.camerash.skygear.chat.ui.model.Message
-import com.stfalcon.chatkit.messages.MessageHolders
+import com.camerash.skygear.chatkit.messages.MessageHolders
 
 class OutgoingTextMessageView(itemView: View) : MessageHolders.OutcomingTextMessageViewHolder<Message>(itemView) {
 

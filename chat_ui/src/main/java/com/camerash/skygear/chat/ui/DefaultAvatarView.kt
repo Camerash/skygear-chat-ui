@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.widget.LinearLayout
 import com.camerash.skygear.chat.ui.model.Message
 import com.camerash.skygear.chat.ui.utils.AvatarBuilder
-import com.stfalcon.chatkit.utils.ShapeImageView
+import com.camerash.skygear.chatkit.utils.ShapeImageView
 
 class DefaultAvatarView(context: Context, attributeSet: AttributeSet) : ShapeImageView(context, attributeSet) {
 

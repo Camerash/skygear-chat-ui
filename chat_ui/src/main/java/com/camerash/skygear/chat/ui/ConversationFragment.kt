@@ -25,8 +25,8 @@ import com.camerash.skygear.chat.ui.model.Message
 import com.camerash.skygear.chat.ui.model.MessageFactory
 import com.camerash.skygear.chat.ui.model.VoiceMessage
 import com.camerash.skygear.chat.ui.utils.*
+import com.camerash.skygear.chatkit.messages.MessagesListAdapter
 import com.google.android.gms.security.ProviderInstaller
-import com.stfalcon.chatkit.messages.MessagesListAdapter
 import io.skygear.plugins.chat.*
 import io.skygear.skygear.Asset
 import io.skygear.skygear.Container
@@ -610,7 +610,7 @@ open class ConversationFragment() :
         this.updateMessage(message)
     }
 
-    override fun onLoadMore(messageCount: Int, totalItemsCount: Int) {
+    override fun onLoadMore(totalItemsCount: Int) {
         this.fetchMessages(before = this.messageLoadMoreBefore)
     }
 

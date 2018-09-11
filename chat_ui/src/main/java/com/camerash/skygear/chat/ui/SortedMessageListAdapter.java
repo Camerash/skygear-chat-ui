@@ -4,10 +4,10 @@ import android.util.SparseArray;
 
 import com.camerash.skygear.chat.ui.model.Message;
 import com.camerash.skygear.chat.ui.model.User;
-import com.stfalcon.chatkit.commons.ImageLoader;
-import com.stfalcon.chatkit.messages.MessageHolders;
-import com.stfalcon.chatkit.messages.MessagesListAdapter;
-import com.stfalcon.chatkit.utils.DateFormatter;
+import com.camerash.skygear.chatkit.commons.ImageLoader;
+import com.camerash.skygear.chatkit.messages.MessageHolders;
+import com.camerash.skygear.chatkit.messages.MessagesListAdapter;
+import com.camerash.skygear.chatkit.utils.DateFormatter;
 
 import java.util.ArrayList;
 import java.util.Collections;

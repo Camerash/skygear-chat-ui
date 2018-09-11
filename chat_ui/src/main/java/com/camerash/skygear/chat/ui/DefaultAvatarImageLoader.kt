@@ -4,7 +4,7 @@ import android.content.Context
 import android.widget.ImageView
 import com.camerash.skygear.chat.ui.utils.AvatarBuilder
 import com.squareup.picasso.Picasso
-import com.stfalcon.chatkit.commons.ImageLoader
+import com.camerash.skygear.chatkit.commons.ImageLoader
 
 class DefaultAvatarImageLoader(
     val context: Context,

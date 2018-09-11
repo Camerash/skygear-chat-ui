@@ -20,10 +20,10 @@ import com.camerash.skygear.chat.ui.utils.AvatarBuilder
 import com.camerash.skygear.chat.ui.utils.ImageLoader
 import com.dewarder.holdinglibrary.HoldingButtonLayout
 import com.dewarder.holdinglibrary.HoldingButtonLayoutListener
-import com.stfalcon.chatkit.messages.CustomMessageHolders
-import com.stfalcon.chatkit.messages.MessageHolders
-import com.stfalcon.chatkit.messages.MessagesList
-import com.stfalcon.chatkit.messages.MessagesListAdapter
+import com.camerash.skygear.chatkit.messages.CustomMessageHolders
+import com.camerash.skygear.chatkit.messages.MessageHolders
+import com.camerash.skygear.chatkit.messages.MessagesList
+import com.camerash.skygear.chatkit.messages.MessagesListAdapter
 import io.skygear.plugins.chat.Conversation
 import io.skygear.plugins.chat.Participant
 import io.skygear.skygear.Container

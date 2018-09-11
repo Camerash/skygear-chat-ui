@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.ImageView
 import com.camerash.skygear.R
 import com.camerash.skygear.chat.ui.model.ImageMessage
-import com.stfalcon.chatkit.messages.MessageHolders
+import com.camerash.skygear.chatkit.messages.MessageHolders
 
 class OutgoingImageMessageView(itemView: View) : MessageHolders.OutcomingImageMessageViewHolder<ImageMessage>(itemView) {
     var receiverAvatarMessageView: ReceiverAvatarMessageView? = null

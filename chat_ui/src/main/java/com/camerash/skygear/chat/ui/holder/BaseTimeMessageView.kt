@@ -6,7 +6,7 @@ import com.camerash.skygear.R
 import com.camerash.skygear.chat.ui.model.Message
 import com.camerash.skygear.chat.ui.model.MessageStatusStyle
 import com.camerash.skygear.chat.ui.model.MessageTimeStyle
-import com.stfalcon.chatkit.utils.DateFormatter
+import com.camerash.skygear.chatkit.utils.DateFormatter
 
 open class BaseTimeMessageView(itemView: View) {
     var timeTextView: TextView? = null

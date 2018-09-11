@@ -2,7 +2,7 @@ package com.camerash.skygear.chat.ui.holder
 
 import android.view.View
 import com.camerash.skygear.chat.ui.model.VoiceMessage
-import com.stfalcon.chatkit.messages.MessageHolders
+import com.camerash.skygear.chatkit.messages.MessageHolders
 
 class OutgoingVoiceMessageView(view: View) : MessageHolders.OutcomingTextMessageViewHolder<VoiceMessage>(view) {
     var voiceMessageView: VoiceMessageView? = null

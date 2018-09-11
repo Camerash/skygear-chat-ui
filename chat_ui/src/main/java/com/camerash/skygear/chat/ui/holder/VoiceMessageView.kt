@@ -28,7 +28,7 @@ class VoiceMessageView(itemView: View, isIncoming: Boolean) {
                     String.format("%02d:%02d", durationInSecond / 60, durationInSecond % 60)
 
             val actionBtn = actionButton ?: return
-            this@VoiceMessageView.timeTextView?.setTextColor(ContextCompat.getColor(actionBtn.context, com.stfalcon.chatkit.R.color.dark_gray))
+            this@VoiceMessageView.timeTextView?.setTextColor(ContextCompat.getColor(actionBtn.context, com.camerash.skygear.chatkit.R.color.dark_gray))
             val actionButtonIcon = when (msg.state) {
                 VoiceMessage.State.PLAYING -> R.drawable.ic_pause_white
                 else -> R.drawable.ic_play_white

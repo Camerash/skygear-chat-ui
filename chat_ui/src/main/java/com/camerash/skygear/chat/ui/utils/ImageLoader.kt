@@ -10,7 +10,7 @@ import android.util.Base64
 import android.widget.ImageView
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.Transformation
-import com.stfalcon.chatkit.commons.ImageLoader
+import com.camerash.skygear.chatkit.commons.ImageLoader
 
 private val DISPLAY_IMAGE_SIZE = 500.0
 

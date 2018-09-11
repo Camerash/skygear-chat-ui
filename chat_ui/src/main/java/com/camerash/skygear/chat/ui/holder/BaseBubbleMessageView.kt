@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.camerash.skygear.chat.ui.model.Message
 import com.camerash.skygear.chat.ui.model.MessageBubbleStyle
-import com.stfalcon.chatkit.R
+import com.camerash.skygear.chatkit.R
 import com.camerash.skygear.R as UiKitResource
 
 open class BaseBubbleMessageView(itemView: View, drawable: Int, val isIncoming: Boolean) {

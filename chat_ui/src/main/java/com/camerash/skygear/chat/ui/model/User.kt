@@ -2,7 +2,7 @@ package com.camerash.skygear.chat.ui.model
 
 import com.camerash.skygear.chat.ui.AvatarType
 import com.camerash.skygear.chat.ui.utils.AvatarBuilder
-import com.stfalcon.chatkit.commons.models.IUser
+import com.camerash.skygear.chatkit.commons.models.IUser
 import io.skygear.plugins.chat.Participant
 import io.skygear.skygear.Asset
 import io.skygear.skygear.Record

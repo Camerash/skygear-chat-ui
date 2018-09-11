@@ -1,4 +1,4 @@
-package com.stfalcon.chatkit.messages
+package com.camerash.skygear.chatkit.messages
 import android.util.SparseArray
 import android.view.LayoutInflater
 import android.view.View
@@ -11,10 +11,10 @@ import com.camerash.skygear.chat.ui.VoiceMessageOnClickListener
 import com.camerash.skygear.chat.ui.model.ImageMessage
 import com.camerash.skygear.chat.ui.model.Message
 import com.camerash.skygear.chat.ui.model.VoiceMessage
-import com.stfalcon.chatkit.commons.ImageLoader
-import com.stfalcon.chatkit.commons.ViewHolder
-import com.stfalcon.chatkit.commons.models.IMessage
-import com.stfalcon.chatkit.utils.DateFormatter
+import com.camerash.skygear.chatkit.commons.ImageLoader
+import com.camerash.skygear.chatkit.commons.ViewHolder
+import com.camerash.skygear.chatkit.commons.models.IMessage
+import com.camerash.skygear.chatkit.utils.DateFormatter
 import io.skygear.plugins.chat.Conversation
 
 class CustomMessageHolders(avatarAdapterFunc: () -> AvatarAdapter, conversationFunc: () -> Conversation?) : MessageHolders() {

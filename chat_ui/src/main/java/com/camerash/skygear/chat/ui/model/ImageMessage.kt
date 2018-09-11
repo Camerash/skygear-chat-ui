@@ -1,7 +1,7 @@
 package com.camerash.skygear.chat.ui.model
 
 import android.net.Uri
-import com.stfalcon.chatkit.commons.models.MessageContentType
+import com.camerash.skygear.chatkit.commons.models.MessageContentType
 import org.json.JSONObject
 import io.skygear.plugins.chat.Message as ChatMessage
 
