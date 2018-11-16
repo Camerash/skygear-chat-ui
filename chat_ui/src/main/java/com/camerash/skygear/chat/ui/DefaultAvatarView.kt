@@ -16,7 +16,7 @@ class DefaultAvatarView(context: Context, attributeSet: AttributeSet) : ShapeIma
 
     fun onBind(message: Message) {
         imageLoader = DefaultAvatarImageLoader(context, AvatarBuilder())
-        imageLoader?.loadImage(this, message.user?.avatar)
+        imageLoader?.loadImage(this, message.user?.avatar, null)
         layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
     }
 }

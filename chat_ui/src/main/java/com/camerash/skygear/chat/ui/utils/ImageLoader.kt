@@ -8,9 +8,9 @@ import android.media.ExifInterface
 import android.net.Uri
 import android.util.Base64
 import android.widget.ImageView
+import com.camerash.skygear.chatkit.commons.ImageLoader
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.Transformation
-import com.camerash.skygear.chatkit.commons.ImageLoader
 
 private val DISPLAY_IMAGE_SIZE = 500.0
 
@@ -19,7 +19,7 @@ class ImageLoader(
         val avatarBuilder: AvatarBuilder
 ) : ImageLoader {
 
-    override fun loadImage(imageView: ImageView?, url: String?) {
+    override fun loadImage(imageView: ImageView?, url: String?, payload: Any?) {
         if (url == null) {
             return
         }

@@ -57,7 +57,7 @@ dependencies {
     implementation 'io.skygear.plugins:chat:1.6.3'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:1.2.71"
-    implementation 'com.github.stfalcon:chatkit:0.3.3'
+    implementation 'com.camerash.skygear:chatkit:0.3.3'
 }
 
 

@@ -610,7 +610,7 @@ open class ConversationFragment() :
         this.updateMessage(message)
     }
 
-    override fun onLoadMore(totalItemsCount: Int) {
+    override fun onLoadMore(page: Int, totalItemsCount: Int) {
         this.fetchMessages(before = this.messageLoadMoreBefore)
     }
 
