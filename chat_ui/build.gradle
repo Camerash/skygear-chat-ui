@@ -72,10 +72,10 @@ bintray {
         vcsUrl = 'https://github.com/camerash/skygear-chat-ui.git'
         publish = true
         version {
-            name = version
-            desc = "Customized Skygear Android SDK UI Kit ${version}"
+            name = VERSION
+            desc = "Customized Skygear Android SDK UI Kit ${VERSION}"
             released  = new Date()
-            vcsTag = version
+            vcsTag = VERSION
         }
     }
 }
